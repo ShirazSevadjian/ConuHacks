@@ -20,7 +20,6 @@ const placesDetected = [
 
 const Main = () => {
     const [isOpen, setOpen] = useState(false);
-    const sheet = useRef();
     const videoRef = useRef(null);
     const [tab, setTab] = useState(0);
 
@@ -39,7 +38,7 @@ const Main = () => {
 
                 <div className="places-detected">
                     {placesDetected.map(placeDetected => (
-                        <div className="place-detected">{placeDetected}</div>
+                        <div key={placeDetected} className="place-detected">{placeDetected}</div>
                     ))}
                 </div>
 
