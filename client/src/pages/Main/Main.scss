@@ -7,15 +7,40 @@
         display: flex;
         align-items: flex-end;
         font-size: 14px;
-        color: rgba(122, 122, 122, 1);   
+        color: rgba(122, 122, 122, 1);
+
+        .places-detected {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            .place-detected {
+                width: 35px;
+                height: 35px;
+                background-color: rgba(87, 87, 87, 0.75);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 900;
+                color: white;
+                margin-bottom: 10px;
+
+                &:active:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
         
         .open {
             height: 550px !important;
             transition: height 0.2s ease-in;
+            opacity: 1 !important;
         }
 
         .sheet {
-            padding: 0 0 25px 25px;
+            padding: 0 0 25px 0;
             width: 100%;
             height: 75px;
             transition: height 0.2s ease-in;
@@ -30,9 +55,11 @@
             -webkit-line-clamp: 2;
                     line-clamp: 2; 
             -webkit-box-orient: vertical;
+            opacity: 0.9;
 
             .fit-padding {
                 padding-right: 25px;
+                padding-left: 25px;
             }
 
             .handle {
@@ -153,10 +180,10 @@
                     &:last-child {
                         margin-right: 25px;
                     }
-                }
 
-                &:last-child {
-                    margin-right: 25px;
+                    &:first-child {
+                        margin-left: 25px;
+                    }
                 }
 
                 &::-webkit-scrollbar { 

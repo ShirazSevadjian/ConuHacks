@@ -13,6 +13,11 @@ const photos = [
     "https://www.bhg.com/thmb/QXGyadcA-06uFSeV5woRVtKlFik=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/quick-poutine-BBOQQT52qRM8_P2JsdQxXI-2336ec1ff4744ee89333a3da76fd7ae3.jpg"
 ];
 
+const placesDetected = [
+    "Mc",
+    "Za"
+];
+
 const Main = () => {
     const [isOpen, setOpen] = useState(false);
     const sheet = useRef();
@@ -31,31 +36,36 @@ const Main = () => {
     return (
         <div className="main">
             <div className="display">
+
+                <div className="places-detected">
+                    {placesDetected.map(placeDetected => (
+                        <div className="place-detected">{placeDetected}</div>
+                    ))}
+                </div>
+
                 <div className={`sheet ${isOpen && "open"}`}>
-                    <div
-                        className="handle"
-                        onClick={() => setOpen(!isOpen)}>
-                        <div className="knob" />
-                    </div>
-
                     <div className="fit-padding">
+                        <div onClick={() => setOpen(!isOpen)}>
+                            <div className="handle">
+                                <div className="knob" />
+                            </div>
 
-                        <div className="title-row">
-                            <div className="title">McDonald's</div>
-                            <div className="rating">
-                                <div className="score">4.5</div>
-                                <StarIcon className="star-icon" />
+                            <div className="title-row">
+                                <div className="title">McDonald's</div>
+                                <div className="rating">
+                                    <div className="score">4.5</div>
+                                    <StarIcon className="star-icon" />
+                                </div>
+                            </div>
+
+                            <div className="description-row">
+                                <div className="place-type">
+                                    <div className="type">Restaurant</div>
+                                    <div className="cost"> . $$</div>
+                                </div>
+                                <div className="place-status">Open</div>
                             </div>
                         </div>
-
-                        <div className="description-row">
-                            <div className="place-type">
-                                <div className="type">Restaurant</div>
-                                <div className="cost"> . $$</div>
-                            </div>
-                            <div className="place-status">Open</div>
-                        </div>
-
 
                         <div className="info">
                             <LanguageIcon className="icon" />
