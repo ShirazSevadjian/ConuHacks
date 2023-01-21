@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/conuhacks/client/static/css/main.17ce892a.css",
+    "main.js": "/conuhacks/client/static/js/main.480415fb.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/conuhacks/client/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/conuhacks/client/index.html",
+    "main.17ce892a.css.map": "/conuhacks/client/static/css/main.17ce892a.css.map",
+    "main.480415fb.js.map": "/conuhacks/client/static/js/main.480415fb.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/conuhacks/client/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17ce892a.css",
+    "static/js/main.480415fb.js"
+  ]
+}
