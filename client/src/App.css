@@ -4,4 +4,35 @@ html, body {
   overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-color: rgb(30, 30, 30);
+  display: flex;
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  margin-top: 40vh;
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash, .img {
+  margin-top: 25vh;
+  height: 100px;
+}
+
+ol {
+  padding-left: 25px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration:none !important; 
+  cursor:pointer;  
 }
